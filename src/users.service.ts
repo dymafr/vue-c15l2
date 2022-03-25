@@ -31,3 +31,18 @@ export function useFetchUsers() {
 
   return { users, isLoading, errors };
 }
+
+// Fonction pour générer des utilisateurs aléatoirement avec restapi.fr
+export function generateUsers() {
+  return fetch('https://restapi.fr/generator', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      times: 10,
+      resourceName: 'vue3users',
+      name: 'name',
+    }),
+  });
+}

@@ -7,8 +7,9 @@
 </template>
 
 <script setup lang="ts">
-import { useFetchUsers } from './users.service';
+import { useFetchUsers, generateUsers } from './users.service';
 
+generateUsers();
 const { users, isLoading, errors } = useFetchUsers();
 </script>
 
