@@ -40,7 +40,7 @@ export function generateUsers() {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      times: 10,
+      times: 3,
       resourceName: 'vue3users',
       name: 'name',
     }),
