@@ -1,7 +1,7 @@
 <template>
   <div v-if="isLoading">Chargement...</div>
   <div v-else>
-    <h2>{{ users }}</h2>
+    <h2 v-for="user in users">{{ user.name }}</h2>
     <h2 v-if="errors">{{ errors }}</h2>
   </div>
 </template>
