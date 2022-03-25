@@ -4,7 +4,7 @@ interface User {
   name: string;
 }
 
-export function useFetch() {
+export function useFetchUsers() {
   const users = ref<User[] | null>(null);
   const isLoading = ref(true);
   const errors = ref<any>(null);
