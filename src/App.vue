@@ -1,12 +1,15 @@
 <template>
-  <h1>{{ secondes }}</h1>
-  <h1>{{ totalIdleTime }}</h1>
+  <div v-if="isLoading">Chargement...</div>
+  <div v-else>
+    <h2>{{ users }}</h2>
+    <h2>{{ errors }}</h2>
+  </div>
 </template>
 
 <script setup lang="ts">
-import { useIdleTime } from './useIdleTime';
+import { useFetchUsers } from './users.service';
 
-const { secondes, totalIdleTime } = useIdleTime();
+const { users, isLoading, errors } = useFetchUsers();
 </script>
 
 <style lang="scss">
